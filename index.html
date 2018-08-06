@@ -32,7 +32,7 @@
         </div>
         <div class="col-sm-9">
 
-            <button id="choose-fighter" onclick="toggleFighter">Choose your fighter</button>
+            <!-- <button id="choose-fighter" onclick="toggleFighter()">Choose your fighter</button> -->
             <img src="style/rocky1.jpg" width=200px height=200px alt="Rocky Pic 1">
 
         </div>
@@ -49,10 +49,43 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <button id="chair" onclick="chair()">CHAIR</button>
-                <button id="chain" onclick="chain()">CHAIN</button>
-                <button id="lightSaber" onclick="lightSaber()">Light Saber</button>
+                <!-- <form> -->
+                    <label>
+                        <input type="radio" name="weapon-group" id="radio-nothing" value=1 checked: false/>Nothing
+                    </label>
+                    <label>
+                        <input type="radio" name="weapon-group" id="radio-chair" value=1.5 checked: false/>CHAIR
+                    </label>
+                    <label>
+                        <input type="radio" name="weapon-group" id="radio-chain" value=2 checked: false/>CHAIN
+                    </label>
+                    <label>
+                        <input type="radio" name="weapon-group" id="radio-lightsaber" value=3 checked: false/>Light Saber</label>
+                <!-- </form> -->
+                <!-- <label class="switch" id="chair-box">
+                    <input type="checkbox">
+                    <span>CHAIR</span>
+                </label>
+                <label class="switch" id="chain-box">
+                    <input type="checkbox">
+                    <span>CHAIN</span>
+                </label>
+                <label class="switch" id="light-saber-box">
+                    <input type="checkbox">
+                    <span>Light Saber</span>
+                </label> -->
+                <!-- <button id="chair" onclick="weapon(chair)">CHAIR</button>
+                <button id="chain" onclick="weapon(chain)">CHAIN</button>
+                <button id="lightSaber" onclick="weapon(lightSaber)">Light Saber</button> -->
             </div>
+        </div>
+        <div class="row">
+            <button id="reset-button" onclick="reset()">RESET</button>
+        </div>
+        <div>
+            
+            <p id="description"></p>
+
         </div>
     </div>
 
