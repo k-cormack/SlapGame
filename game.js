@@ -18,23 +18,31 @@ let multiplier = 1
 // }
 // assignName()
 
+function gameService() {
+
+    let dataStore = this
+    let target = new fighterType("Italian Stallion", 100, 1, 5, 10);
+
+    function fighterType(name, health, slap, punch, kick) {
+        this.name = name
+        this.health = health
+        this.blows = {
+            "slap": slap,
+            "punch": punch,
+            "kick": kick
+        };
+        this.items = []
+        this.hits = 0
+    };
 
 
-// function fighterType(name, health, slap, punch, kick) {
-//     this.name = name
-//     this.health = health
-//     this.blows = {
-//         slap, punch, kick
-//     }
-// }
+    function weapon(name, modifier, description) {
+        this.name = name;
+        this.modifier = modifier;
+        this.description = description;
+    }
+};
 
-// function toggleFighter() { }
-
-// function weapon(name, modifier, description) {
-//     this.name = name;
-//     this.modifier = modifier;
-//     this.description = description;
-// }
 
 // let weaponType = {
 //     chair: new weapon("Chair", 1.5, "Have a seat!!"),
@@ -85,8 +93,8 @@ function update() {
     if (health <= 0) {
         health = 0
     }
-    document.getElementById("health").innerText = health;
-    document.getElementById("hits").innerText = hits
+    document.getElementById("health").innerText = health.toString()
+    document.getElementById("hits").innerText = hits.toString()
 }
 
 function clearRadio() {
@@ -107,8 +115,8 @@ function reset() {
     health = 100;
     hits = 0;
     multiplier = 0;
-    document.getElementById('health').innerText = health;
-    document.getElementById("hits").innerText = hits;
+    document.getElementById('health').innerText = health.toString();
+    document.getElementById("hits").innerText = hits.toString();
     document.getElementById("description").innerText = "";
     clearRadio()
 

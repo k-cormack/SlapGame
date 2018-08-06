@@ -14,55 +14,54 @@
 
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3">
-
+            <div class="col-sm-12 text-center">
                 <span>Health:
                     <span id="health">100</span>
                 </span>
+                <br>
                 <span>Name:
                     <span id="player-name">Italian Stallion</span>
                 </span>
+                <br>
                 <span>Hits:
                     <span id="hits">0</span>
                 </span>
-
             </div>
         </div>
-        <div class="col-sm-9">
 
-            <!-- <button id="choose-fighter" onclick="toggleFighter()">Choose your fighter</button> -->
-            <img src="style/rocky1.jpg" width=200px height=200px alt="Rocky Pic 1">
-
-        </div>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-lg-12">
+                <!-- <button id="choose-fighter" onclick="toggleFighter()">Choose your fighter</button> -->
+                <img src="style/rocky1.jpg" width=200px height=200px alt="Rocky Pic 1" class="mx-auto d-block">
+                <!--class="mx-auto d-block" centers the image-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
                 <button id="slap" onclick="slap()">SLAP</button>
                 <button id="punch" onclick="punch()">PUNCH</button>
                 <button id="kick" onclick="kick()">KICK</button>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 text-center">
                 <!-- <form> -->
-                    <label>
-                        <input type="radio" name="weapon-group" id="radio-nothing" value=1 checked: false/>Nothing
-                    </label>
-                    <label>
-                        <input type="radio" name="weapon-group" id="radio-chair" value=1.5 checked: false/>CHAIR
-                    </label>
-                    <label>
-                        <input type="radio" name="weapon-group" id="radio-chain" value=2 checked: false/>CHAIN
-                    </label>
-                    <label>
-                        <input type="radio" name="weapon-group" id="radio-lightsaber" value=3 checked: false/>Light Saber</label>
-                <!-- </form> -->
-                <!-- <label class="switch" id="chair-box">
+                <label>
+                    <input type="radio" name="weapon-group" id="radio-nothing" value=1 checked: false/>Nothing
+                </label>
+                <label>
+                    <input type="radio" name="weapon-group" id="radio-chair" value=1.5 checked: false/>CHAIR
+                </label>
+                <label>
+                    <input type="radio" name="weapon-group" id="radio-chain" value=2 checked: false/>CHAIN
+                </label>
+                <label>
+                    <input type="radio" name="weapon-group" id="radio-lightsaber" value=3 checked: false/>Light Saber</label>
+            </div>
+            <!-- </form> -->
+            <!-- <label class="switch" id="chair-box">
                     <input type="checkbox">
                     <span>CHAIR</span>
                 </label>
@@ -74,21 +73,21 @@
                     <input type="checkbox">
                     <span>Light Saber</span>
                 </label> -->
-                <!-- <button id="chair" onclick="weapon(chair)">CHAIR</button>
+            <!-- <button id="chair" onclick="weapon(chair)">CHAIR</button>
                 <button id="chain" onclick="weapon(chain)">CHAIN</button>
                 <button id="lightSaber" onclick="weapon(lightSaber)">Light Saber</button> -->
-            </div>
         </div>
         <div class="row">
-            <button id="reset-button" onclick="reset()">RESET</button>
+            <div class="col-sm-12 text-center">
+                <button id="reset-button" onclick="reset()">RESET</button>
+            </div>
         </div>
-        <div>
-            
-            <p id="description"></p>
 
-        </div>
+        <h1 id="description" class="text-center"></h1>
+
+
+
     </div>
-
     <script src="game.js"></script>
 </body>
 
