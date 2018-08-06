@@ -95,6 +95,16 @@ function update() {
     }
     document.getElementById("health").innerText = health.toString()
     document.getElementById("hits").innerText = hits.toString()
+    var damage = document.getElementById("hit-progress")
+    if (health <= 0) {
+        health = 0
+    }
+
+    damage.style.width = 100 - health + '%'
+    if (health == 0) {
+        document.getElementById("description").innerText = "KNOCKOUT!!!!!"
+    }
+
 }
 
 function clearRadio() {
@@ -118,6 +128,8 @@ function reset() {
     document.getElementById('health').innerText = health.toString();
     document.getElementById("hits").innerText = hits.toString();
     document.getElementById("description").innerText = "";
+    var damage = document.getElementById("hit-progress");
+    damage.style.width = 100 - health + '%';
     clearRadio()
 
 }
