@@ -4,13 +4,14 @@ let health = 100
 
 let hits = 0
 
-let italianStallion = new fighterType('Italian Stallion', 100, 1, 5, 10)
-
-let sugarRay = new fighterType('Sugar Ray', 100, 1, 5, 10)
-
-let fighter = italianStallion
-
 let multiplier = 1
+
+// let italianStallion = new fighterType('Italian Stallion', 100, 1, 5, 10)
+
+// let sugarRay = new fighterType('Sugar Ray', 100, 1, 5, 10)
+
+// let fighter = italianStallion
+
 
 // function assignName() {
 //     document.getElementById("player-name").innerText = fighterName;
@@ -19,13 +20,13 @@ let multiplier = 1
 
 
 
-function fighterType(name, health, slap, punch, kick) {
-    this.name = name
-    this.health = health
-    this.blows = {
-        slap, punch, kick
-    }
-}
+// function fighterType(name, health, slap, punch, kick) {
+//     this.name = name
+//     this.health = health
+//     this.blows = {
+//         slap, punch, kick
+//     }
+// }
 
 // function toggleFighter() { }
 
@@ -42,7 +43,7 @@ function fighterType(name, health, slap, punch, kick) {
 // }
 
 
-let checkedWeapon = document.getElementsByTagName('input').values
+// let checkedWeapon = document.getElementsByTagName('input').values
 
 // let weaponValue;
 // for (var i = 0, i < checkedWeapon.length; i++) {
@@ -88,10 +89,6 @@ function update() {
     document.getElementById("hits").innerText = hits
 }
 
-
-
-
-
 function clearRadio() {
     var clear = document.getElementsByName("weapon-group");
     for (var i = 0; i < clear.length; i++) {
@@ -105,7 +102,6 @@ function clearRadio() {
 //             clearRadio[i].checked = false;
 //         }
 //     }
-
 
 function reset() {
     health = 100;
@@ -123,8 +119,6 @@ function multiplierFunction() {
     let chain = document.getElementById("radio-chain").checked;
 
     let lightSaber = document.getElementById("radio-lightsaber").checked;
-
-
 
     if (chair == true) {
         multiplier = 1.5;
